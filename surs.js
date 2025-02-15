@@ -1,8 +1,3 @@
-//помочь мне собрать на ПАЗик, что бы я простроил автодом и чилил семьей у реки.
-//  СБЕР  +7 923 668 0000 
-//положить в wwwroot, в плагинах прописать вашадрес/surs.js
-
-
 (function (  ) {
     'use strict';
 
@@ -155,20 +150,9 @@ var SourceTMDB = function (parent) {
             { id: 453, title: 'Hulu' },
             { id: 1024, title: 'Amazon Prime' },
             { id: 213, title: 'Netflix' },
-            { id: 2493, title: 'Start' },
-            { id: 2859, title: 'Premier' },
-            { id: 4085, title: 'KION' },
-            { id: 3923, title: 'ИВИ' },
-            { id: 3871, title: 'Okko' },
-            { id: 3827, title: 'Кинопоиск' },
-            { id: 5806, title: 'Wink' },
-            { id: 806, title: 'СТС' },
-            { id: 1191, title: 'ТНТ' },
             { id: 3186, title: 'HBO Max' },
             { id: 2076, title: 'Paramount+' },
             { id: 3353, title: 'Peacock' },
-            
-
         ];
 
         // Перемешивание массива
@@ -352,15 +336,6 @@ var SourceTMDBkids = function (parent) {
             { id: 453, title: 'Hulu' },
             { id: 1024, title: 'Amazon Prime' },
             { id: 213, title: 'Netflix' },
-            { id: 2493, title: 'Start' },
-            { id: 2859, title: 'Premier' },
-            { id: 4085, title: 'KION' },
-            { id: 3923, title: 'ИВИ' },
-            { id: 3871, title: 'Okko' },
-            { id: 3827, title: 'Кинопоиск' },
-            { id: 5806, title: 'Wink' },
-            { id: 806, title: 'СТС' },
-            { id: 1191, title: 'ТНТ' },
             { id: 3186, title: 'HBO Max' },
             { id: 2076, title: 'Paramount+' },
             { id: 3353, title: 'Peacock' }
@@ -437,10 +412,10 @@ function searchByKeyword() {
     
         var partsData = [
             function (callback) {
-                createRequest('discover/movie?with_genres=10751,16&with_original_language=ru', 'русские мультфильмы', callback);
+                createRequest('discover/movie?with_genres=10751,16&with_original_language=uk', 'Ураїніські мультфильми', callback);
             },
             function (callback) {
-                createRequest('discover/movie?with_genres=10751,16&with_original_language=uk|en|be|zh|cn', 'иностранные мультфильмы', callback);
+                createRequest('discover/movie?with_genres=10751,16&with_original_language=uk|en|be|zh|cn', 'Іноземні мультфильми', callback);
             }
         ];
 
@@ -492,20 +467,7 @@ function add() {
         get: function() {
             return tmdb_mod;
         }
-    });
-
-/*
-function add() {
-        var tmdb_mod = Object.assign({}, Lampa.Api.sources.tmdb, new SourceTMDB(Lampa.Api.sources.tmdb));
-        Lampa.Api.sources.tmdb_mod = tmdb_mod;
-        Object.defineProperty(Lampa.Api.sources, 'AVIAMOVIE', {
-          get: function get() {
-            return tmdb_mod;
-          }
-        });
-
-*/
-        
+    });        
         
         Lampa.Params.select('source', Object.assign({}, Lampa.Params.values['source'], {'AVIAMOVIE': 'AVIAMOVIE'}), 'tmdb');
       }

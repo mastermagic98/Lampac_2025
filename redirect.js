@@ -1,6 +1,34 @@
 (function() {
 	'use strict';
-
+ function addLocalization() {
+        Lampa.Lang.add({
+            lampac_sample_server: {
+                en: 'For example: lampa.mx',
+                uk: 'Наприклад: lampa.mx',
+                ru: 'Например: lampa.mx',
+            },
+            lampac_server_address: {
+                en: 'Server address',
+                uk: 'Адреса сервера',
+                ru: 'Адрес сервера',
+            },
+            lampac_press_to_enter: {
+                en: 'Press to enter, you can change the server using the button above',
+                uk: 'Натисніть для введення, зміну сервера можна буде зробити зверху кнопкою',
+                ru: 'Нажмите для ввода, смену сервера можно будет сделать кнопкой сверху',
+            },
+            lampac_permanent_redirect: {
+                en: 'Permanent redirect',
+                uk: 'Постійне перенаправлення',
+                ru: 'Постоянное перенаправление',
+            },
+            lampac_select_redirection_method: {
+                en: 'Select a server redirection method',
+                uk: 'Виберіть спосіб перенаправлення сервера',
+                ru: 'Выберите способ перенаправления сервера',
+            }
+        });
+    }
 Lampa.Platform.tv();
 	
 var server_protocol = location.protocol === "https:" ? 'https://' : 'http://'	
@@ -29,7 +57,7 @@ function startMe() {
   
   Lampa.SettingsApi.addComponent({
             component: 'location_redirect',
-            name: 'Смена сервера',
+            name: Lampa.Lang.translate('lampac_server_address'),
             icon: icon_server_redirect
   });
 	
@@ -39,12 +67,12 @@ function startMe() {
 					name: 'location_server',
 					type: 'input', 
 					values: '',
-					placeholder: 'Например: bylampa.online',
+					placeholder: Lampa.Lang.translate('lampac_sample_server'),
 					default: ''
 				},
 				field: {
-					name: 'Адрес сервера',
-					description: 'Нажмите для ввода, смену сервера можно будет сделать кнопкой в верхнем баре'
+					name: Lampa.Lang.translate('lampac_server_address'),
+					description: Lampa.Lang.translate('lampac_press_to_enter')
 				},
 				onChange: function (value) {
 				   /*if (value) {
@@ -67,8 +95,8 @@ function startMe() {
 				default: false
 			},
 			field: {
-				name: 'Постоянный редирект',
-				description: 'Чтобы отключить постоянный редирект зажмите клавишу ВНИЗ при загрузке приложения' 
+				name: Lampa.Lang.translate('lampac_permanent_redirect'),
+				description: Lampa.Lang.translate('lampac_select_redirection_method') 
 			}
    });
 

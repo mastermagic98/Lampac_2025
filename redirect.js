@@ -7,6 +7,11 @@
                 uk: 'Наприклад: lampa.mx',
                 ru: 'Например: lampa.mx',
             },
+	    lampac_name_change_address: {
+                en: 'Server change',
+                uk: 'Зміна сервера',
+                ru: 'Смена сервера',
+            },
             lampac_server_address: {
                 en: 'Server address',
                 uk: 'Адреса сервера',
@@ -57,7 +62,7 @@ function startMe() {
   
   Lampa.SettingsApi.addComponent({
             component: 'location_redirect',
-            name: Lampa.Lang.translate('lampac_server_address'),
+            name: Lampa.Lang.translate('lampac_name_change_address'),
             icon: icon_server_redirect
   });
 	

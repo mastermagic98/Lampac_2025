@@ -112,6 +112,7 @@ var _ = '<svg fill="currentColor" rule="evenodd" height="800px" width="800px" ve
                     1 == _ && 0 == $('[data-action="netflix"]').length ? a() : Lampa.Helper.show("Необходимо переоткрыть Lampa")
                 }
             })*/
+            )
         }
         window.appready ? v() : Lampa.Listener.follow("app", function(_) {
             "ready" == _.type && v()

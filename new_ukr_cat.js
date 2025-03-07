@@ -102,7 +102,7 @@
                         default: 0
                     },
                     field: {
-                        name: "UA Serials"
+                        name: "UA Serial"
                     },
                     onChange: function(_) {
                         1 == _ && 0 == $('[data-action="ua_serial"]').length ? uas() :

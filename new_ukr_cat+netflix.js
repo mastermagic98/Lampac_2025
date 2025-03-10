@@ -69,7 +69,8 @@
         var c = $('<li class="menu__item selector" data-action="ua_cartoon"><div class="menu__ico">' + ico_c + '</div><div class="menu__text">UA cartoon</div></li>');
         c.on("hover:enter", function () {
             Lampa.Activity.push({
-                url: "discover/movie?with_genres=10751,16&with_original_language=ua",
+                url: /*"discover/movie?with_genres=10751,16&with_original_language=ua"*/
+                "discover/movie?with_genres=10751,16&sort_by=revenue.desc&with_original_language=ua",
                 title: "UA cartoon",
                 component: "category_full",
                 source: "tmdb",

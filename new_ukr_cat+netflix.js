@@ -70,7 +70,7 @@
         c.on("hover:enter", function () {
             Lampa.Activity.push({
                 url: /*"discover/movie?with_genres=10751,16&with_original_language=ua"*/
-                "discover/movie?with_genres=10751,16&sort_by=revenue.desc&with_original_language=ua",
+                "discover/movie?with_genres=10751,16&sort_by=revenue.desc&with_original_language=ru|uk|en|be|zh|cn",
                 title: "UA cartoon",
                 component: "category_full",
                 source: "tmdb",

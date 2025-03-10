@@ -22,7 +22,7 @@
             en: 'Lampa needs to be restarted',
             uk: 'Необхідно перезапустити Lampa',
             ru: 'Необходимо перезапустить Lampa',
-        }qwedfdqwdqwd   qwdqwdqdqwdqwdq
+        }   
     })
     };
     
